@@ -1,0 +1,25 @@
+FROM node:14.16.0-alpine3.11 as base
+
+RUN apk add shadow openssl bash git
+
+RUN touch /home/node/.bashrc | echo "PS1='\w\$ '" >> /home/node/.bashrc
+
+RUN npm config set cache /usr/src/hub/web/.npm-cache --global
+
+RUN usermod -u 1000 node
+
+WORKDIR /usr/src/hub/web/
+
+EXPOSE 3000
+
+USER node
+# -------------- #
+FROM base as development
+
+USER root
+
+ADD ./frontend/.containers/web/entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+USER node

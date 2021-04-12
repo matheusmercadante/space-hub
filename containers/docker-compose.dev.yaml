@@ -1,0 +1,81 @@
+version: '3'
+services:
+  hub-server:
+    build:
+      context: ../services/.
+      dockerfile: ../containers/server/Dockerfile.dev
+    image: haungi/hub-convertion-server:v.dev
+    container_name: dev-hub-convertion-server
+    ports:
+      - '8080:80' # Connect localhost 80 port to container 80 port
+    links: # Link services to access http://hub-web and  http://hub-api inside the container
+      - hub-api:api
+      - hub-frontend:web
+    networks:
+      - hub-network
+
+  hub-frontend:
+    build:
+      context: ../services/.
+      dockerfile: ../containers/frontend/Dockerfile.dev
+      target: development
+    image: haungi/hub-convertion-frontend:v.dev
+    container_name: dev-hub-convertion-frontend
+    entrypoint: /entrypoint.sh
+    ports:
+      - '3000:3000' # For docker to now where to redirect HMR queries
+      - '35729:35729'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - SKIP_PREFLIGHT_CHECK=true
+      - REACT_APP_API_URL=http://hub-api:3333/
+    volumes: # For webpack dev server to use our local files
+      - ./../services/frontend/:/usr/src/hub/web
+    networks:
+      - hub-network
+
+  hub-api:
+    build:
+      context: ../services/.
+      dockerfile: ../containers/api/Dockerfile.dev
+      target: development
+    image: haungi/hub-convertion-api:v.dev
+    container_name: dev-hub-convertion-api
+    entrypoint: dockerize -wait tcp://hub-api-db:5432 -timeout 40s /entrypoint.sh
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=hub-api-db
+      - DB_TYPE=postgres
+      - DB_PORT=5432
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=root
+      - DB_NAME=hub_conversor
+    links:
+      - hub-api-db:hub-api-db
+    volumes:
+      - ./../services/api:/usr/src/hub/api
+    networks:
+      - hub-network
+    depends_on:
+      - hub-api-db
+
+  hub-api-db:
+    build:
+      context: ../services/.
+      dockerfile: ../containers/database/Dockerfile.dev
+    image: haungi/hub-convertion-api-db:v.dev
+    container_name: dev-hub-convertion-api-db
+    restart: always
+    tty: true
+    ports:
+      - "54032:5432"
+    volumes:
+      - ./../services/api/.containers/database:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=root
+    networks: 
+      - hub-network
+
+networks:
+  hub-network:
+    driver: bridge

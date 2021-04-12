@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "processdata"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.2.3"
+tornado = "^6.1"
+asyncio = "^3.4.3"
+pika = "^1.2.0"
+google-api-python-client = "^2.1.0"
+google-auth-httplib2 = "^0.1.0"
+google-auth-oauthlib = "^0.4.4"
+cached-property = "^1.5.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,15 @@
+{
+  "name": "csv-automation",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">     <img alt=\"GoBarber\" title=\"#delicinha\" src=\".github/gostack.png\" width=\"250px\" /> </div> <h1 align=\"center\">     <img alt=\"GoBarber\" title=\"#delicinha\" src=\".github/gobarber.png\" width=\"250px\" />",
+  "main": "index.js",
+  "scripts": {
+    "dev:install": "./scripts/dev.sh",
+    "dev:up": "docker-compose -f containers/docker-compose.dev.yaml up -d",
+    "dev:down": "docker-compose -f containers/docker-compose.dev.yaml down",
+    "dev:uninstall": "docker-compose -f containers/docker-compose.dev.yaml down --rmi all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
