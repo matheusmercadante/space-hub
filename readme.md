@@ -1,13 +1,13 @@
 <div align="center">
-    <img alt="GoBarber" title="#delicinha" src=".github/gostack.png" width="250px" />
+    <img alt="HubConvertion" title="#delicinha" src=".github/stack.png" width="250px" />
 </div>
 <h1 align="center">
-    <img alt="GoBarber" title="#delicinha" src=".github/gobarber.png" width="250px" />
+    <img alt="HubConvertion" title="#delicinha" src=".github/hubconvertion.png" width="250px" />
     
 </h1>
 
 <h4 align="center">
-  🚀 Desafio GoBarber 11.0
+  🚀 Desafio Hub Convertion
 </h4>
 
 <p align="center">
@@ -41,7 +41,7 @@ Esse projeto foi desenvolvido durante o Bootcamp da Rocketseat. Trata-se de um p
 ## 🎨 Layout
 
 <p align="center">
-    <img alt="GoBarber" title="#GoBarber" src=".github/capa.png" width="720px" />
+    <img alt="HubCovnertion" title="#HubConvertion" src=".github/capa.png" width="720px" />
 </p>
 
 Você pode utilizar a seguinte URL para visualizar todas as telas: [Visualizar](https://www.figma.com/file/BXCihtXXh9p37lGsENV614/GoBarber?node-id=34%3A1180)
@@ -62,19 +62,19 @@ Dentro do **README** de cada subpasta do projeto é detalhado como executar as a
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/WallysonGalvao/rocketseat-gobarber.git
+$ git clone https://github.com/matheusmercadante/hub-convertion.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd rocketseat-gobarber/backend
+$ cd hub-convertion/api
 
 # Instale as dependências
-$ yarn install
+$ npm install ## yarn install
 
 # Execute a aplicação
-$ yarn start
+$ npm start ## yarn start
 ```
 
-Realizar os comandos acima para as demais pastas **[frontend e backend]**.
+Realizar os comandos acima para as demais pastas **[frontend e api]**.
 
 ## :construction: Como contribuir para o projeto
 
@@ -90,4 +90,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com horas em frente ao :computer: por [Wallyson Galvão](https://www.linkedin.com/in/wallyson-galvao/)
+Feito com horas em frente ao :computer: por [Matheus Mercadante](https://www.linkedin.com/in/matheus-mercadante/)
