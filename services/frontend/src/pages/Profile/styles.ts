@@ -40,7 +40,7 @@ export const Content = styled.div`
       margin-bottom: 24px;
     }
     a {
-      color: #ff9000;
+      color: #fd753d;
       display: flex;
       align-items: center;
       margin-top: 24px;
@@ -50,7 +50,7 @@ export const Content = styled.div`
         margin-right: 16px;
       }
       &:hover {
-        color: ${shade(0.2, '#ff9000')};
+        color: ${shade(0.2, '#fd753d')};
       }
     }
   }
@@ -69,7 +69,7 @@ export const AvatarInput = styled.div`
     position: absolute;
     width: 48px;
     height: 48px;
-    background: #ff9000;
+    background: #fd753d;
     border-radius: 50%;
     right: 0;
     bottom: 0;
@@ -88,7 +88,7 @@ export const AvatarInput = styled.div`
       width: 20px;
     }
     &:hover {
-      background: ${shade(0.2, '#ff9000')};
+      background: ${shade(0.2, '#fd753d')};
     }
   }
 `;

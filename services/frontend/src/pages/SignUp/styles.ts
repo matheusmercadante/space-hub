@@ -1,7 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
 
-import backgroundImage from '../../assets/sign-up-background.png';
+// import backgroundImage from '../../assets/sign-up-background.png';
+import backgroundImage from '../../assets/background.jpg';
 
 const appearFromRight = keyframes`
 from {
@@ -69,8 +70,15 @@ export const AnimationContainer = styled.div`
   }
 `;
 
+// export const Background = styled.div`
+//   flex: 1;
+//   background: url(${backgroundImage}) no-repeat center;
+//   background-size: cover;
+// `;
+
 export const Background = styled.div`
   flex: 1;
   background: url(${backgroundImage}) no-repeat center;
-  background-size: cover;
+  background-size: auto;
+  background-position: 32% 30%;
 `;
