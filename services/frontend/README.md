@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="GoBarber" title="#delicinha" src="../.github/gobarber.png" width="250px" />
+    <img alt="HubConvertion" title="#delicinha" src="../.github/hubconvertion.png" width="250px" />
 </h1>
 
 <p align="center">
@@ -11,17 +11,19 @@
 </p>
 
 <h2>
-<strong>Frontend</strong> da aplicação GoBarber.
+<strong>Frontend</strong> da aplicação HubConvertion.
 </h2>
 
 ## 🚀 Sobre
 
-A versão web do projeto GoBarber representa a visão da barbearia, ou seja, todas funcionalidades presentes na versão web são para administradores. As funcionalidades para o usuário serão dispostas no aplicativo mobile.
+A versão web do projeto HubConvertion representa a visão do hub, ou seja, todas funcionalidades presentes na versão web são para realizar as conversões.
 
 ## :collision: Funcionalidades
 
-- Criar e gerenciar horários;
-- Criar e gerenciar barbeiros;
+- Criar e gerenciar pacotes;
+- Criar e gerenciar repositórios;
+- Converter pacote;
+- Converter repositório;
 
 ## 🎨 Layout
 
@@ -42,14 +44,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ### Pré-requisitos
 
-É necessário que o **/backend** da aplicação esteja rodando no endereço http://localhost:3333
+É necessário que o **/api** da aplicação esteja rodando no endereço http://localhost:3333
 
 ```bash
 # Em um terminal, entrar na raiz do projeto **/frontend** e rodar o comando:
-$ yarn install
+$ npm install ## yarn install
 
 # Ainda na raiz do projeto, rodar o comando:
-$ yarn start
+$ npm install ## yarn start
 ```
 
 Feito isso, acessar o endereço http://localhost:3000

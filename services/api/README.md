@@ -1,3 +1,18 @@
+<!-- SOLID -->
+
+<!-- # Single Responsability Principle -->
+  <!-- Open Closed Principle -->
+  <!-- # Linkov Substitution Principle -->
+  <!-- Interface Segregation Principle -->
+  <!-- # Dependency Invertion Principle -->
+
+<!-- Dependency Injection -->
+  <!-- # tsyringe -->
+
+<!-- Restful arquiteture -->
+  <!-- # Controllers -->
+  <!-- max five methods (index, show, create, update, delete) -->
+
 <h1 align="center">
     <img alt="HubConvertion" title="#delicinha" src="../.github/hubconvertion.png" width="250px" />
 </h1>
@@ -11,7 +26,7 @@
 </p>
 
 <h2>
-<strong>Microservice ProcessData</strong> da aplicação HubConvertion.
+<strong>Api</strong> da aplicação HubConvertion.
 </h2>
 
 ## 🚀 Sobre
@@ -20,20 +35,21 @@
 
 ## :collision: Funcionalidades
 
-- Comparar sheet com outra base de dados;
-- Converter sheet;
-- Retornar novo sheet com merge;
+- Criar e gerenciar pacotes;
+- Criar e gerenciar repositórios;
+- Converter pacote;
+- Converter repositório;
 
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Python](https://www.python.org/)
-- [Tornado](https://www.tornadoweb.org/en/stable/)
-- [Pandas](https://pandas.pydata.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [NodeJS](https://nodejs.org/) | [Express](https://expressjs.com/pt-br/)
+- [JWT](https://jwt.io/) | [BCrycptjs](https://github.com/dcodeIO/bcrypt.js#readme)
 - [RabbitMQ](https://www.rabbitmq.com/)
 
-\* Para mais detalhes, veja o <kbd>[pyproject.toml](./pyproject.toml)</kbd>
+\* Para mais detalhes, veja o <kbd>[package.json](./package.json)</kbd>
 
 ## :zap: Rodando o projeto
 
@@ -51,22 +67,22 @@ $ docker ps
 $ docker start database
 ```
 
-### ProcessData
+### Api
 
 ```bash
-# Entrar na raiz do projeto **/processdata** e rodar o comando:
-$ poetry install
+# Entrar na raiz do projeto **/api** e rodar o comando:
+$ npm install ## yarn install
 
 # Ainda na raiz do projeto, rodar o comando:
-$ python processdata/server.py ## python3 processdata/server.py
+$ npm start ## yarn start
 ```
 
-Feito isso, o server ficara escutando IO
+Feito isso, acessar o endereço http://localhost:3333
 
 Se desejar, pode rodar os testes do projeto, usando o seguinte comando:
 
 ```bash
-$ poetry test
+$ npm run test ## yarn test
 ```
 
 ## :notebook: Endpoints

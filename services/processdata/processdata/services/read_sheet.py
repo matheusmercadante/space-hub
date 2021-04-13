@@ -6,7 +6,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2 import service_account
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-SERVICE_ACCOUNT_FILE = '/home/matheusmercadante/Documentos/PROJETOS/csv-automation/processdata/processdata/config/token.json'
+SERVICE_ACCOUNT_FILE = '/home/matheusmercadante/Documentos/PROJETOS/csv-automation/services/processdata/processdata/config/token.json'
 
 creds = None
 creds = service_account.Credentials.from_service_account_file(
