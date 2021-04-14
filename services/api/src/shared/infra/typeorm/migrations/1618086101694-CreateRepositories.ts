@@ -65,10 +65,10 @@ export class CreateRepositories1618086101694 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey('package', 'RepositoryUser')
-    await queryRunner.dropForeignKey('package', 'RepositoryPackage')
+    await queryRunner.dropForeignKey('repositories', 'RepositoryUser')
+    await queryRunner.dropForeignKey('repositories', 'RepositoryPackage')
 
-    await queryRunner.dropTable('packages');
+    await queryRunner.dropTable('repositories');
   }
 }
 

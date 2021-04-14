@@ -48,12 +48,12 @@ export default class CreatePackages1618080143581 implements MigrationInterface {
         referencedTableName: 'users',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
-      })
+      }),
     ]);
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey('package', 'PackageUser')
+    await queryRunner.dropForeignKey('packages', 'PackageUser');
 
     await queryRunner.dropTable('packages');
   }

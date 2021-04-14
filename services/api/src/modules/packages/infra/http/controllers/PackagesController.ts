@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 
 import CreatePackageService from '@modules/packages/services/CreatePackageService';
 
-export default class PackageController {
+export default class PackagesController {
   // public async index(request: Request, response: Response): Promise<Response> {
   //   const packagesRepository = container.resolve(CreatePackageService);
 
