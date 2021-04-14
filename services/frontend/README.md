@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="HubConvertion" title="#delicinha" src="../.github/hubconvertion.png" width="250px" />
+    <img alt="SpaceHub" title="#delicinha" src="../.github/spacehub.svg" width="250px" />
 </h1>
 
 <p align="center">
@@ -11,12 +11,12 @@
 </p>
 
 <h2>
-<strong>Frontend</strong> da aplicação HubConvertion.
+<strong>Frontend</strong> da aplicação Space Hub.
 </h2>
 
 ## 🚀 Sobre
 
-A versão web do projeto HubConvertion representa a visão do hub, ou seja, todas funcionalidades presentes na versão web são para realizar as conversões.
+A versão web do projeto Space Hub representa a visão do hub, ou seja, todas funcionalidades presentes na versão web são para realizar as conversões.
 
 ## :collision: Funcionalidades
 

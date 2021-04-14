@@ -1,9 +1,8 @@
 <div align="center">
-    <img alt="HubConvertion" title="#delicinha" src=".github/stack.png" width="250px" />
+    <img alt="SpaceHub" title="#delicinha" src=".github/stack.png" width="250px" />
 </div>
 <h1 align="center">
-    <img alt="HubConvertion" title="#delicinha" src=".github/hubconvertion.png" width="250px" />
-    
+    <img alt="SpaceHub" title="#delicinha" src=".github/spacehub.svg" width="250px" />
 </h1>
 
 <h4 align="center">
